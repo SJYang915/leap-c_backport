@@ -13,7 +13,7 @@ dependencies = [
   "PyYAML==6.0.2"
 ]
 
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 maintainers = [
   { name = "Dirk Reinhardt", email = "dirk.p.reinhardt@ntnu.no" },
   { name = "Jasper Hoffmann", email = "hoffmaja@informatik.uni-freiburg.de" },
@@ -43,14 +43,14 @@ test = [
   "gymnasium[mujoco]==1.1.1",
   "numpy-quaternion==2024.0.8",
   "matplotlib==3.10.5",
-  "PyQt5==5.15.11"
+  "PyQt5"
 ]
 rendering = [
   "pygame==2.6.1",
   "moviepy==2.2.1"
 ]
 docs = [
-  "sphinx==8.2.3",
+  "sphinx==7.4.7",
   "sphinx_rtd_theme==3.0.2",
   "myst-parser==4.0.1"
 ]
@@ -79,7 +79,7 @@ Repository = "https://github.com/leap-c/leap-c"
 testpaths = "tests"
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py310"
 line-length = 100
 extend-exclude = ["external"]
 
