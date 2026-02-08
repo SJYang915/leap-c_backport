@@ -5,9 +5,15 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "leap-c"
 version = "2024.0.0"
-dependencies = ["gymnasium", "scipy", "numpy", "pandas", "ruff"]
+dependencies = [
+  "gymnasium==0.29.1",
+  "numpy==1.24.4",
+  "scipy==1.10.1",
+  "pandas<2.1",
+  "ruff",
+]
 
-requires-python = ">=3.8"
+requires-python = ">=3.8,<3.9"
 authors = [{ name = "Dirk Reinhardt", email = "dirk.p.reinhardt@ntnu.no" }]
 maintainers = [{ name = "Dirk Reinhardt", email = "dirk.p.reinhardt@ntnu.no" }]
 description = "Learning Predictive Control"
@@ -24,7 +30,17 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-test = ["pytest", "pygame", "moviepy", "wandb", "tensorboard", "gymnasium[mujoco]", "numpy-quaternion", "matplotlib", "PyQt5"]
+test = [
+  "pytest",
+  "pygame",
+  "moviepy",
+  "wandb",
+  "tensorboard",
+  "gymnasium[mujoco]",
+  "numpy-quaternion",
+  "matplotlib",
+  "PyQt5",
+]
 rendering = ["pygame", "moviepy"]
 docs = ["sphinx", "sphinx_rtd_theme", "myst-parser"]
 dev = ["leap_c[rendering]", "leap_c[docs]", "leap_c[test]", "pre-commit"]
